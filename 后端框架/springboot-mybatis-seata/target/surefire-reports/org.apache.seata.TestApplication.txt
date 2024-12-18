@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------
+Test set: org.apache.seata.TestApplication
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 7.548 s <<< FAILURE! - in org.apache.seata.TestApplication
+testDelBigHashKey  Time elapsed: 0.215 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.apache.seata.TestApplication.preparHashTestData(TestApplication.java:105)
+	at org.apache.seata.TestApplication.testDelBigHashKey(TestApplication.java:101)
+
