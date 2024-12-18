@@ -1,0 +1,145 @@
+.ContainerBanner {
+    display: flex;
+    overflow: hidden;
+
+    >div {
+        padding-right: 8px;
+    }
+
+    >div:last-child {
+        flex: 1;
+        text-align: right;
+        padding-right: 0;
+    }
+
+    .progress {
+        width: 200px;
+
+        .ant-progress-inner {
+            background-color: #c4dff6 !important;
+        }
+    }
+
+    .reload {
+        padding-left: 8px;
+        color: #2db7f5;
+        cursor: pointer;
+        user-select: none;
+
+        &:hover {
+            color: #4fc4fa;
+        }
+
+        &:active {
+            color: #76d4ff;
+        }
+    }
+}
+
+.ContainerBannerWraper {
+    border: 1px dashed #2db7f5;
+    border-radius: 4px;
+    line-height: 28px;
+    background-color: #e5f2fa;
+    padding: 4px 16px;
+    margin-bottom: 20px;
+
+    .moreInfo {}
+}
+
+.ContainerBanner {
+    font-size: 12px;
+    color: #666;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+}
+
+.ContainerBanner>div {
+    padding-right: 8px;
+}
+
+.ContainerBanner>div:last-child {
+    -ms-flex: 1;
+    flex: 1;
+    text-align: right;
+    padding-right: 0;
+}
+
+.ContainerBanner .nameEllipsis {
+    max-width: 120px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.ContainerBanner .progress {
+    width: 200px;
+}
+
+.ContainerBanner .progress .ant-progress-inner {
+    background-color: #c4dff6 !important;
+}
+
+.ContainerBanner .reload {
+    padding-left: 8px;
+    white-space: nowrap;
+    color: #2db7f5;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.ContainerBanner .reload:hover {
+    color: #4fc4fa;
+}
+
+.ContainerBanner .reload:active {
+    color: #76d4ff;
+}
+
+.ContainerBanner .infoConfig {
+    color: #4fc4fa;
+}
+
+.ContainerBanner .infoConfig i {
+    font-size: 15px;
+    padding-left: 4px;
+}
+
+.ContainerBanner .infoConfig svg {
+    vertical-align: middle;
+    font-size: 12px;
+}
+
+.ContainerBannerWraper {
+    border: 1px dashed #2db7f5;
+    border-radius: 4px;
+    line-height: 28px;
+    background-color: #e5f2fa;
+    padding: 4px 16px;
+    margin-bottom: 24px;
+}
+
+.ContainerBannerWraper .moreInfo {
+    font-size: 12px;
+    color: #666;
+}
+
+.ContainerBannerWraper .moreInfo .infoConfig {
+    color: #4fc4fa;
+}
+
+.ContainerBannerWraper .moreInfo .infoConfig i {
+    font-size: 15px;
+    padding-left: 4px;
+}
+
+.ContainerBannerWraper .moreInfo .infoConfig svg {
+    vertical-align: middle;
+    font-size: 12px;
+}

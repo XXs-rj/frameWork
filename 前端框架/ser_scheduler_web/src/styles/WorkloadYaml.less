@@ -1,0 +1,211 @@
+/*
+ * Licensed Materials - Property of .com
+ * (C) Copyright 2024 . All Rights Reserved.
+ * ----
+ * editor.less page
+ *
+ * @author kksong
+ * @date Wednesday November 21st 2024
+ */
+@import "./core.less";
+
+#WorkloadYaml {
+    height: 100%;
+
+    .operationBar {
+        padding: @padding-base 0;
+        background-color: #272727;
+
+        >div {
+            margin: 0 auto;
+            width: 150px;
+
+            >button:first-child {
+                margin-right: 12px;
+            }
+        }
+
+        .darkButton {
+            background-color: #272727;
+            color: rgba(255, 255, 255, 0.65);
+            border-color: rgba(255, 255, 255, 0.65);
+        }
+    }
+
+    .editor {
+        height: 100%;
+
+        :global {
+            .ant-layout-content {
+                padding: 0;
+                margin: 0;
+            }
+
+            .codeEditor {
+                // height: auto;
+            }
+
+            .ace-monokai {
+                background-color: #191919 !important;
+            }
+
+            .ace-monokai .ace_gutter {
+                background-color: transparent !important;
+            }
+
+            .ace-monokai .ace_print-margin {
+                background-color: rgba(255, 255, 255, 0.09);
+            }
+
+            .ace_scrollbar-v {
+                &::-webkit-scrollbar-track {
+                    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+                    border-radius: 10px;
+                    background-color: #191919;
+                }
+
+                &::-webkit-scrollbar {
+                    width: 8px;
+                    background-color: #191919;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    border-radius: 10px;
+                    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+                    background-color: #555;
+                }
+
+                &::-webkit-scrollbar-thumb:hover {
+                    background-color: #555;
+                }
+            }
+        }
+    }
+
+    .editHeader {
+        height: 40px;
+        display: flex;
+        background-color: #353535;
+        justify-content: flex-end;
+        align-items: center;
+        color: @primary-color;
+
+        .headTitle {
+            padding-left: @padding-small;
+            font-size: 14px;
+            flex-grow: 1;
+        }
+
+        .editIcon {
+            padding: @padding-base;
+            color: #ccc;
+            font-size: 12px;
+            height: 100%;
+            line-height: 40px;
+
+            &:hover {
+                color: @primary-color;
+                background-color: #272727;
+            }
+
+            i {
+                padding-right: 4px;
+            }
+
+            cursor: pointer;
+        }
+
+        .fullEditIcon {
+            padding-right: @padding-small;
+            padding-left: 10px;
+            line-height: 12px;
+            // color: #ccc;
+            // &:hover {
+            //   color: @primary-color;
+            // }
+        }
+    }
+
+    .editLayout {
+        :global {
+            .ant-layout-content {
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+
+    .sider {
+        border: 1px solid #252525;
+        background-color: #333;
+        display: block !important;
+    }
+
+    .warnZoon {
+        border: 1px solid #252525;
+        background-color: #1e1e1e;
+        overflow-y: auto;
+        width: 100%;
+
+        &::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            background-color: #272727;
+        }
+
+        &::-webkit-scrollbar {
+            width: 8px;
+            background-color: #272727;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            background-color: #555;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background-color: #555;
+        }
+
+        // padding: @padding-base;
+        >div {
+            // height: 36px;
+            // line-height: 36px;
+            padding-left: @padding-small;
+            // vertical-align: middle;
+            font-size: 12px;
+        }
+
+        :global {
+            .yamlBasegrammar {
+                color: @error-color;
+
+                i {
+                    padding-right: @padding-base;
+                }
+            }
+
+            .fetchError {
+                color: @error-color;
+
+                i {
+                    padding-right: @padding-base;
+                }
+            }
+        }
+    }
+
+    .errorInfo {
+        background-color: #333;
+        font-size: 12px !important;
+        height: 36px;
+        line-height: 36px;
+        color: rgba(255, 255, 255, 0.65);
+    }
+
+    .noError {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.25);
+    }
+}

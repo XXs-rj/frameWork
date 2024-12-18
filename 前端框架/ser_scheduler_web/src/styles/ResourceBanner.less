@@ -1,0 +1,65 @@
+/*
+ * Licensed Materials - Property of .com
+ * (C) Copyright 2018 . All Rights Reserved.
+ * ----
+ * index.less page
+ *
+ * @author zhangtao
+ * @date Thursday July 5th 2018
+ */
+@import './core.less';
+
+.ResourceBanner {
+  display: flex;
+  overflow: hidden;
+
+  >div {
+    padding-right: @padding-base;
+  }
+
+  >div:last-child {
+    flex: 1;
+    text-align: right;
+    padding-right: 0;
+  }
+
+  .progress {
+    width: 200px;
+
+    .ant-progress-inner {
+      background-color: #c4dff6 !important;
+    }
+  }
+
+  .reload {
+    padding-left: @padding-base;
+    color: @primary-color;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+      color: #4fc4fa;
+    }
+
+    &:active {
+      color: #76d4ff;
+    }
+  }
+}
+
+.ResourceBannerWraper {
+  border: 1px dashed @primary-color ;
+  border-radius: 4px;
+  line-height: 28px;
+  background-color: #e5f2fa;
+  padding: 4px @padding-small;
+  margin-bottom: @padding-medium;
+
+  .moreInfo {}
+}
+
+.ResourceBannerW {
+  i {
+    font-size: 12px !important;
+  }
+}

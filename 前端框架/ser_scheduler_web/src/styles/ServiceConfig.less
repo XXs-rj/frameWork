@@ -1,0 +1,333 @@
+@import "./core.less";
+
+#Service,
+#service-secret-config {
+
+  .commonSearchInputWrapper {
+    width: 180px;
+  }
+
+  height: 100%;
+  width: 100%;
+
+  //折叠面板-start
+  // button:not(:first-of-type) {
+  //   background-color: white;
+  // }
+
+  .title {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  .configSearchAndListBox {
+    background-color: white;
+    border-radius: 4px;
+    padding: 20px 0;
+
+    .ant-search-input-wrapper {
+      margin: 0 auto;
+      display: block;
+    }
+
+    .searchConfigBox {
+      position: relative;
+      padding: 20px 15px 0;
+
+      .searchIcon {
+        position: absolute;
+        top: 32px;
+        right: 25px;
+        cursor: pointer;
+      }
+    }
+
+    .resultCount {
+      padding: 20px 20px 0;
+      font-size: 12px;
+
+      .clearSearch {
+        color: #2cb8f5;
+
+        i {
+          margin-right: 10px;
+        }
+      }
+
+      .count {
+        float: right;
+      }
+    }
+
+    .configSortListBox {
+      margin-top: 20px;
+
+      .configSort {
+        position: relative;
+        height: 38px;
+        line-height: 38px;
+        font-size: 12px;
+        padding-left: 17px;
+
+        .fa-trash-o {
+          right: 25px;
+          display: none;
+        }
+
+        .fa-pencil-square-o {
+          right: 50px;
+          display: none;
+        }
+
+        .citeCount {
+          right: 10%;
+        }
+
+        .sortName {
+          display: block;
+          width: 80%;
+        }
+
+        &:hover {
+          .sortName {
+            color: @primary-color;
+          }
+
+          background-color: #eceff4;
+          padding-left: 15px;
+          border-left: 2px solid @primary-color;
+        }
+      }
+
+      .active {
+        .sortName {
+          color: @primary-color;
+        }
+
+        background-color: #eceff4;
+        padding-left: 15px;
+        border-left: 2px solid @primary-color;
+      }
+    }
+  }
+
+  .ant-collapse {
+    border: none;
+    padding-top: 20px;
+    background-color: transparent;
+
+    .ant-collapse-item {
+      border-top: none;
+
+      .ant-collapse-header {
+        height: 60px;
+        line-height: 60px;
+        font-size: 12px;
+        border: 1px solid #d4d4d4;
+        border-left: 3px solid @primary-color;
+        background-color: #fff;
+        margin-bottom: 15px;
+
+        &:hover {
+          background-color: #fafafa;
+        }
+
+        //checkbox
+        .group-name {
+          z-index: 3;
+          display: inline-block;
+          font-size: 12px;
+
+          i {
+            margin: 0 10px;
+          }
+        }
+
+        //小箭头
+        .arrow {
+          line-height: 60px;
+          font-size: 30px;
+          right: 0;
+          left: auto;
+
+          &:before {
+            content: '\E601';
+          }
+        }
+      }
+
+      .anticon-folder-open {
+        display: none;
+      }
+
+      .ant-collapse-header[aria-expanded="true"] {
+        .arrow {
+          line-height: 60px;
+          font-size: 30px;
+
+          &:before {
+            transform: rotate(450deg);
+          }
+        }
+
+        .group-name {
+          .anticon-folder {
+            display: none;
+          }
+
+          .anticon-folder-open {
+            display: inline-block;
+          }
+        }
+      }
+
+      // .ant-collapse-content {
+      //   clear: both;
+      //   // padding:0 0 100px 58px;
+      //   border: 1px solid #d4d4d4;
+      //   border-top: 0;
+      //   position: relative;
+      //   top: -15px;
+      //   background-color: #fff;
+
+      //   .ant-collapse-content-box {
+      //     padding: 0 0 50px 25px;
+
+      //     .file-list {
+      //       .ant-timeline {
+      //         .ant-timeline-item-tail {
+      //           top: 0;
+      //           height: 100%;
+      //           border-left: 1px solid #D6D6D6;
+      //         }
+
+      //         .ant-timeline-item-head {
+      //           display: none;
+      //         }
+
+      //         .ant-timeline-item-content {
+      //           padding: 0 0 10px 7px;
+      //           top: 30px;
+      //           z-index: 2;
+      //           overflow: auto;
+      //         }
+
+      .file-item {
+
+        // position: relative;
+        /*button {
+                  :hover {
+                    color: #57c5f7;
+                    border-color: #57c5f7;
+                  }
+                }*/
+        overflow: auto;
+
+        .config-cross {
+          color: #979797;
+          border-color: #979797;
+
+          &:hover {
+            border-color: @primary-color;
+            color: @primary-color;
+          }
+        }
+
+        .line {
+          float: left;
+          margin-top: 40px;
+          margin-left: -2px;
+          width: 40px;
+          height: 0;
+          border-bottom: 1px solid #D6D6D6;
+        }
+
+        table {
+          // float: left;
+          border-collapse: collapse;
+
+          td.title {
+            width: 150px;
+
+            .projectName,
+            .branchName {
+              width: 120px;
+              display: inline-block;
+              margin-bottom: -5px
+            }
+          }
+
+          td {
+            font-size: 12px;
+            min-width: 150px;
+            border: 1px solid #D6D6D6;
+
+            .li {
+              line-height: 40px;
+              padding: 0 15px;
+            }
+
+            .lis {
+              line-height: 40px;
+              border-top: 1px solid #D6D6D6;
+              padding: 0 15px;
+              max-width: 350px;
+            }
+
+            .node-number {
+              background: #5EB85E;
+              display: inline-block;
+              padding: 3px 7px;
+              line-height: normal;
+              color: white;
+              border-radius: 45%;
+              margin-left: 10px;
+            }
+
+            .relate {
+              width: 128px;
+              display: inline-block;
+              height: 40px;
+              line-height: 40px;
+              padding: 0 12px;
+              border-bottom: 1px solid #D6D6D6;
+            }
+
+            .path {
+              height: 40px;
+              line-height: 40px;
+              padding: 0 12px;
+            }
+
+            .check {
+              position: relative;
+              z-index: 2;
+            }
+          }
+        }
+      }
+
+      //         .ant-timeline-item-last {
+      //           .ant-timeline-item-tail {
+      //             display: block;
+      //             height: 70px;
+      //           }
+      //         }
+      //       }
+      //     }
+      //   }
+      // }
+    }
+  }
+
+  //折叠面板-end
+
+  .ant-modal-body {
+    font-size: 12px;
+  }
+
+  .ant-table {
+    font-size: 12px;
+  }
+
+}
